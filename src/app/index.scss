@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+
+
+$Moderatecyan: hsl(176, 50%, 47%);
+$Darkcyan: hsl(176, 72%, 28%);
+$Black: hsl(0, 0%, 0%);
+$Darkgray: hsl(0, 0%, 48%);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Commissioner', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    top: 0; left: 0;
+    max-width: 1920px;
+    width: 100vw;
+    font-size: 16px;
+    background-color: white;
+}
+
+.Design{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    opacity: .7;
+    display: none;
+}

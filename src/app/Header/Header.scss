@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+
+.header{
+    @apply w-full relative;
+    background-image: url("./../../images/image-hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 25rem;
+
+    .header__box{
+        @apply py-12 px-40 flex flex-row justify-between w-full items-center ml-1;
+
+        .nav{
+            @apply flex flex-row ;
+
+            .nav__item{
+                font-family: 'Commissioner', sans-serif;
+                @apply mx-3 font-normal text-white text-sm;
+                &:last-child{
+                    @apply mr-2;
+                }
+            }
+        }
+    }
+}

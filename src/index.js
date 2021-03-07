@@ -5,16 +5,7 @@ import {
     Route
   } from "react-router-dom";
 import ReactDOM from "react-dom";
-import './index.css';
-
-
-const Main = () => {
-    return (
-        <div>
-            <h1>Main App</h1>
-        </div>
-    )
-}
+import Main from "./app/Main.js"
 
 const App = () => {
     return(
@@ -31,5 +22,3 @@ const App = () => {
 
 
 ReactDOM.render(<App /> , document.querySelector(".root"))
-
-//     "homepage": "https://github.com/JDFIREX/React-Frontend-Mentor-crowdfunding-product-page-main#readme",

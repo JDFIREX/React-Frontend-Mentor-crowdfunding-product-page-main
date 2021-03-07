@@ -1,0 +1,34 @@
+.mastercraft{
+    width: 45.5rem;
+    @apply bg-white rounded-lg align-middle flex flex-col items-center px-12 pt-14 pb-12 shadow-md;
+    .mastercraft__logo{
+        @apply absolute -top-6;
+    }
+    .mastercraft__header{
+        h1{
+            @apply text-center font-bold text-3xl;
+        }
+        p{
+            color : hsl(0, 0%, 48%);
+            @apply text-base mt-4;
+        }
+    }
+    .mastercraft__back{
+        @apply w-full flex flex-row justify-between mt-9;
+
+        .back__btn{
+            background-color: hsl(176, 50%, 47%);
+            @apply text-white text-base font-medium px-10 rounded-full shadow-md;
+            &:hover{
+                background-color: hsl(176, 72%, 28%);
+            }
+        }
+        .back_slider{
+            @apply flex flex-row bg-gray-100 items-center rounded-full shadow;
+            p{
+                color : hsl(0, 0%, 48%);
+                @apply pl-4 pr-6 font-bold;
+            }
+        }
+    }
+}

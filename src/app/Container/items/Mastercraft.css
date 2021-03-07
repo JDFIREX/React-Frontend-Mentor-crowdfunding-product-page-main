@@ -1,0 +1,40 @@
+.mastercraft {
+  width: 45.5rem;
+  @apply bg-white rounded-lg align-middle flex flex-col items-center px-12 pt-14 pb-12 shadow-md;
+}
+
+.mastercraft .mastercraft__logo {
+  @apply absolute -top-6;
+}
+
+.mastercraft .mastercraft__header h1 {
+  @apply text-center font-bold text-3xl;
+}
+
+.mastercraft .mastercraft__header p {
+  color: #7a7a7a;
+  @apply text-base mt-4;
+}
+
+.mastercraft .mastercraft__back {
+  @apply w-full flex flex-row justify-between mt-9;
+}
+
+.mastercraft .mastercraft__back .back__btn {
+  background-color: #3cb4ac;
+  @apply text-white text-base font-medium px-10 rounded-full shadow-md;
+}
+
+.mastercraft .mastercraft__back .back__btn:hover {
+  background-color: #147b74;
+}
+
+.mastercraft .mastercraft__back .back_slider {
+  @apply flex flex-row bg-gray-100 items-center rounded-full shadow;
+}
+
+.mastercraft .mastercraft__back .back_slider p {
+  color: #7a7a7a;
+  @apply pl-4 pr-6 font-bold;
+}
+/*# sourceMappingURL=Mastercraft.css.map */
