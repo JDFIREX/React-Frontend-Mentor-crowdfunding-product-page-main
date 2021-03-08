@@ -6,6 +6,7 @@
         @apply w-full pl-0 flex flex-row;
 
         .stats__item{
+            border-right: 1px solid lightgray;
             @apply w-2/6 pl-12;
             h1{
                 @apply text-3xl tracking-wide font-bold;
@@ -13,6 +14,9 @@
             p{
                 color : hsl(0, 0%, 48%);
                 @apply mt-2;
+            }
+            &:last-child{
+                border-right: none;
             }
         }
     }

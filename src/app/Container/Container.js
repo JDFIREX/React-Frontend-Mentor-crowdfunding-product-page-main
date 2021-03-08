@@ -4,6 +4,7 @@ import "./Container.css"
 import Mastercraft from "./items/Mastercraft"
 import Back from "./items/Back"
 import Backers from "./items/Backers"
+import Project from "./items/Project"
 
 const Container = () => {
 
@@ -16,6 +17,7 @@ const Container = () => {
             <Mastercraft setBack={setBack} back={back} />
             {back && <Back />}
             <Backers />
+            <Project />
         </div>
     )
 }

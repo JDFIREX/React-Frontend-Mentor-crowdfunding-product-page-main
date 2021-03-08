@@ -1,0 +1,11 @@
+.section__header{
+    @apply w-full;
+
+    h1{
+        @apply text-xl font-bold text-black;
+    }
+    p{
+        line-height: 1.9rem;
+        @apply pt-8;
+    }
+}

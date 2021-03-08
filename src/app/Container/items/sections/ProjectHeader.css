@@ -1,0 +1,13 @@
+.section__header {
+  @apply w-full;
+}
+
+.section__header h1 {
+  @apply text-xl font-bold text-black;
+}
+
+.section__header p {
+  line-height: 1.9rem;
+  @apply pt-8;
+}
+/*# sourceMappingURL=ProjectHeader.css.map */
