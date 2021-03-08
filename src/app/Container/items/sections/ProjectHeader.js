@@ -1,9 +1,9 @@
 import React from "react"
 import "./ProjectHeader.css"
 
-const ProjectHeader = ({ data }) => {
+const ProjectHeader = React.memo(({ data }) => {
 
-    console.log(data,"project Header render")
+    // console.log(data,"project Header render")
 
     return(
         <div className="section__header">
@@ -12,7 +12,7 @@ const ProjectHeader = ({ data }) => {
             <p>{data.p2}</p>
         </div>
     )
-}
+})
 
 
 export default ProjectHeader

@@ -1,0 +1,87 @@
+.section__item{
+    border: 1px solid rgba(197, 191, 191, 0.678);
+    @apply w-full py-8 px-7 rounded-md mt-6 bg-white;
+
+    .item__header{
+        @apply w-full flex flex-row justify-between items-center;
+
+        h1{
+            @apply text-lg font-bold block;
+        }
+        p{
+            color : hsl(176, 50%, 47%);
+            @apply font-medium;
+        }
+    }
+    .item__p{
+        @apply w-full mt-6 text-base;
+        p{
+            color : hsl(0, 0%, 48%);
+            line-height: 1.8rem;
+        }
+    }
+    .item__select{
+        @apply w-full flex flex-row justify-between items-center mt-7;
+        .select__left{
+            @apply flex flex-row items-center;
+            h1{
+                @apply font-bold text-3xl;
+            }
+            p{
+                color :  hsl(0, 0%, 48%);
+                @apply ml-3;
+            }
+        }
+        button{
+            background-color: hsl(176, 50%, 47%);
+            @apply w-40 h-12 text-white rounded-full shadow text-sm font-medium;
+            &:hover{
+                background-color: hsl(176, 72%, 28%);
+            }
+        }
+    }
+}
+
+.section__item__out{
+    border: 1px solid lightgray;
+    @apply w-full py-8 px-7 rounded-md mt-6 opacity-50 bg-white;
+
+    .item__header{
+        @apply w-full flex flex-row justify-between items-center;
+
+        h1{
+            color : hsl(0, 0%, 48%);
+            @apply text-lg font-bold;
+        }
+        p{
+            color : hsl(0, 0%, 48%);
+            @apply font-medium;
+        }
+    }
+    .item__p{
+        @apply w-full mt-6 text-base;
+        p{
+            @apply opacity-75;
+            color : hsl(0, 0%, 48%);
+            line-height: 1.8rem;
+        }
+    }
+    .item__select{
+        @apply w-full flex flex-row justify-between items-center mt-7;
+        .select__left{
+            @apply flex flex-row items-center;
+            h1{
+                color :  hsl(0, 0%, 48%);
+                @apply font-bold text-3xl;
+            }
+            p{
+                color :  hsl(0, 0%, 48%);
+                @apply ml-3;
+            }
+        }
+        button{
+            background-color: hsl(0, 0%, 48%);
+            @apply w-40 h-12 text-white rounded-full shadow text-sm font-medium;
+        }
+    }
+}

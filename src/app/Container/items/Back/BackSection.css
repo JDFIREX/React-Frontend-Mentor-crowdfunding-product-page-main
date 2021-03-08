@@ -1,0 +1,91 @@
+.back__item {
+  border: 1px solid rgba(197, 191, 191, 0.678);
+  @apply w-full py-8 px-7 rounded-md mt-6 bg-white;
+}
+
+.back__item .item__header {
+  @apply w-full flex flex-row justify-between items-center;
+}
+
+.back__item .item__header .header__info {
+  @apply flex flex-row;
+}
+
+.back__item .item__header .header__info h1 {
+  @apply text-lg font-bold block;
+}
+
+.back__item .item__header .header__info p {
+  color: #3cb4ac;
+  @apply font-medium;
+}
+
+.back__item .item__header .header__left {
+  @apply flex flex-row items-center;
+}
+
+.back__item .item__header .header__left h1 {
+  @apply font-bold text-3xl;
+}
+
+.back__item .item__header .header__left p {
+  color: #7a7a7a;
+  @apply ml-3;
+}
+
+.back__item .item__p {
+  @apply w-full mt-6 text-base;
+}
+
+.back__item .item__p p {
+  color: #7a7a7a;
+  line-height: 1.8rem;
+}
+
+.section__item__out {
+  border: 1px solid lightgray;
+  @apply w-full py-8 px-7 rounded-md mt-6 opacity-50 bg-white;
+}
+
+.section__item__out .item__header {
+  @apply w-full flex flex-row justify-between items-center;
+}
+
+.section__item__out .item__header .header__info {
+  @apply flex flex-row;
+}
+
+.section__item__out .item__header .header__info h1 {
+  color: #7a7a7a;
+  @apply text-lg font-bold;
+}
+
+.section__item__out .item__header .header__info p {
+  color: #7a7a7a;
+  @apply font-medium;
+}
+
+.section__item__out .item__header .header__left {
+  @apply flex flex-row items-center;
+}
+
+.section__item__out .item__header .header__left h1 {
+  color: #7a7a7a;
+  @apply font-bold text-3xl;
+}
+
+.section__item__out .item__header .header__left p {
+  color: #7a7a7a;
+  @apply ml-3;
+}
+
+.section__item__out .item__p {
+  @apply w-full mt-6 text-base;
+}
+
+.section__item__out .item__p p {
+  @apply opacity-75;
+  color: #7a7a7a;
+  line-height: 1.8rem;
+}
+/*# sourceMappingURL=BackSection.css.map */

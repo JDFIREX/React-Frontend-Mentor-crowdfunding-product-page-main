@@ -1,0 +1,21 @@
+.back__header {
+  @apply w-full mb-10 bg-white flex-col;
+}
+
+.back__header .close {
+  @apply w-full;
+}
+
+.back__header .close .close_back {
+  @apply ml-auto;
+}
+
+.back__header .header__info h1 {
+  @apply text-xl font-bold text-black;
+}
+
+.back__header .header__info p {
+  line-height: 1.9rem;
+  @apply pt-8;
+}
+/*# sourceMappingURL=BackHeader.css.map */

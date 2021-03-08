@@ -1,0 +1,21 @@
+.back__header{
+    @apply w-full mb-10 bg-white flex-col;
+
+    .close{
+        @apply w-full;
+        .close_back{
+            @apply ml-auto;
+        }
+    }
+
+
+    .header__info{
+        h1{
+            @apply text-xl font-bold text-black;
+        }
+        p{
+            line-height: 1.9rem;
+            @apply pt-8;
+        }
+    }
+}

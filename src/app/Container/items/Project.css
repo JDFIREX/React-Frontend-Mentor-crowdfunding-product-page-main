@@ -1,5 +1,5 @@
 .project {
   width: 45.5rem;
-  @apply mt-6  rounded-lg shadow-md py-12 px-12;
+  @apply mt-6  rounded-lg shadow-md py-12 px-12 bg-white;
 }
 /*# sourceMappingURL=Project.css.map */

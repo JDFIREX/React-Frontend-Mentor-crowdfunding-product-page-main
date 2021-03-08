@@ -37,4 +37,8 @@
   color: #7a7a7a;
   @apply pl-4 pr-6 font-bold;
 }
+
+.mastercraft .mastercraft__back .back_slider .slider__p_book {
+  color: #147b74;
+}
 /*# sourceMappingURL=Mastercraft.css.map */

@@ -5,25 +5,37 @@
 
 
 $Moderatecyan: hsl(176, 50%, 47%);
-$Darkcyan: hsl(176, 72%, 28%);
+$Darkcyan: #147b74;
 $Black: hsl(0, 0%, 0%);
 $Darkgray: hsl(0, 0%, 48%);
 
 
 *{
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     font-family: 'Commissioner', sans-serif;
     box-sizing: border-box;
 }
+html{
+    display: flex;
+    justify-content: center;
+}
 
 body{
+    margin: 0; padding: 0;
     position: relative;
     top: 0; left: 0;
     max-width: 1920px;
-    width: 100vw;
+    width: 100%;
     font-size: 16px;
+    overflow-x: hidden;
     background-color: #fafafa;
+}
+.root{
+    width: 100%;
+    position: relative;
+    top: 0;left: 0;
 }
 
 .Design{
@@ -31,5 +43,5 @@ body{
     top: 0; left: 0;
     width: 100%;
     opacity: .7;
-    // display: none;
+    display: none;
 }

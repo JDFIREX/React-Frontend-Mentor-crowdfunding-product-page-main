@@ -1,23 +1,64 @@
 import React from "react"
+import "./ProjectSection.css"
 
-const ProjectSection = ({ data }) => {
+const ProjectSection = React.memo(({ data, setBack, back }) => {
 
-    console.log(data)
+    // console.log(data)
+
+    const HandleClick = (e) => {
+        e.preventDefault();
+        setBack(!back);
+        data.pressed = true;
+        window.scrollTo(0,0)
+    }
+
+    const Stock = () => {
+        return(
+            <div className="section__item" >
+                <div className="item__header">
+                    <h1>{data.Header}</h1>
+                    <p>{data.pledge}</p>
+                </div>
+                <div className="item__p">
+                    <p>{data.p}</p>
+                </div>
+                <div className="item__select">
+                    <div className="select__left" >
+                        <h1>{data.left}</h1> 
+                        <p>left</p>
+                    </div>
+                    <button onClick={HandleClick}>{data.btn}</button>
+                </div>
+            </div>
+        )
+    }
+
+    const OutOfStock = () => {
+        return(
+            <div className="section__item__out">
+                <div className="item__header">
+                    <h1>{data.Header}</h1>
+                    <p>{data.pledge}</p>
+                </div>
+                <div className="item__p">
+                    <p>{data.p}</p>
+                </div>
+                <div className="item__select">
+                    <div className="select__left" >
+                        <h1>{data.left}</h1> 
+                        <p>left</p>
+                    </div>
+                    <button>{data.Out}</button>
+                </div>
+            </div>
+        )
+    }
 
     return(
-        <div className="section__item">
-            <div className="item__header">
-
-            </div>
-            <div className="item__p">
-
-            </div>
-            <div className="item__select">
-
-            </div>
-        </div>
+        <>
+            {data.left == 0 ? <OutOfStock /> : <Stock />}
+        </>
     )
-}
-
+})
 
 export default ProjectSection
