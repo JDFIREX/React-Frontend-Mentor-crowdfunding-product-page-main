@@ -1,91 +1,112 @@
-.back__item {
+.back__item, .back__item__select, .back__item__out {
   border: 1px solid rgba(197, 191, 191, 0.678);
-  @apply w-full py-8 px-7 rounded-md mt-6 bg-white;
+  @apply w-full rounded-md bg-white flex flex-col mt-6;
 }
 
-.back__item .item__header {
+.back__item .item__info, .back__item__select .item__info, .back__item__out .item__info {
+  @apply w-full flex flex-row pt-7 pb-7 pr-6;
+}
+
+.back__item .item__info .item__select__ring, .back__item__select .item__info .item__select__ring, .back__item__out .item__info .item__select__ring {
+  @apply w-20 h-auto flex justify-center pt-1 pl-1;
+}
+
+.back__item .item__info .item__select__ring .select_ring, .back__item__select .item__info .item__select__ring .select_ring, .back__item__out .item__info .item__select__ring .select_ring {
+  border: 2px solid lightgray;
+  @apply w-6 h-6 rounded-full p-1;
+}
+
+.back__item .item__info .item__select__ring .select_ring .ring_inner, .back__item__select .item__info .item__select__ring .select_ring .ring_inner, .back__item__out .item__info .item__select__ring .select_ring .ring_inner {
+  background-color: #3cb4ac;
+  @apply w-full h-full rounded-full;
+}
+
+.back__item .item__info .item__main, .back__item__select .item__info .item__main, .back__item__out .item__info .item__main {
+  @apply flex flex-col w-full ml-1;
+}
+
+.back__item .item__info .item__main .item__header, .back__item__select .item__info .item__main .item__header, .back__item__out .item__info .item__main .item__header {
   @apply w-full flex flex-row justify-between items-center;
 }
 
-.back__item .item__header .header__info {
-  @apply flex flex-row;
+.back__item .item__info .item__main .item__header .header__info, .back__item__select .item__info .item__main .item__header .header__info, .back__item__out .item__info .item__main .item__header .header__info {
+  @apply flex flex-row w-full items-center;
 }
 
-.back__item .item__header .header__info h1 {
-  @apply text-lg font-bold block;
+.back__item .item__info .item__main .item__header .header__info h1, .back__item__select .item__info .item__main .item__header .header__info h1, .back__item__out .item__info .item__main .item__header .header__info h1 {
+  @apply text-base font-bold block;
 }
 
-.back__item .item__header .header__info p {
+.back__item .item__info .item__main .item__header .header__info h1:hover, .back__item__select .item__info .item__main .item__header .header__info h1:hover, .back__item__out .item__info .item__main .item__header .header__info h1:hover {
   color: #3cb4ac;
-  @apply font-medium;
 }
 
-.back__item .item__header .header__left {
-  @apply flex flex-row items-center;
+.back__item .item__info .item__main .item__header .header__info p, .back__item__select .item__info .item__main .item__header .header__info p, .back__item__out .item__info .item__main .item__header .header__info p {
+  color: #3cb4ac;
+  @apply font-bold ml-4;
 }
 
-.back__item .item__header .header__left h1 {
-  @apply font-bold text-3xl;
+.back__item .item__info .item__main .item__header .header__left, .back__item__select .item__info .item__main .item__header .header__left, .back__item__out .item__info .item__main .item__header .header__left {
+  @apply flex flex-row items-center justify-center;
 }
 
-.back__item .item__header .header__left p {
+.back__item .item__info .item__main .item__header .header__left h1, .back__item__select .item__info .item__main .item__header .header__left h1, .back__item__out .item__info .item__main .item__header .header__left h1 {
+  @apply font-bold text-xl;
+}
+
+.back__item .item__info .item__main .item__header .header__left p, .back__item__select .item__info .item__main .item__header .header__left p, .back__item__out .item__info .item__main .item__header .header__left p {
   color: #7a7a7a;
-  @apply ml-3;
+  @apply ml-2 font-bold;
 }
 
-.back__item .item__p {
-  @apply w-full mt-6 text-base;
+.back__item .item__info .item__main .item__p, .back__item__select .item__info .item__main .item__p, .back__item__out .item__info .item__main .item__p {
+  @apply w-full mt-4 font-medium;
 }
 
-.back__item .item__p p {
+.back__item .item__info .item__main .item__p p, .back__item__select .item__info .item__main .item__p p, .back__item__out .item__info .item__main .item__p p {
+  font-size: .9rem;
   color: #7a7a7a;
   line-height: 1.8rem;
 }
 
-.section__item__out {
+.back__item .item__select, .back__item__select .item__select, .back__item__out .item__select {
+  @apply w-full py-7 px-6 flex flex-row items-center justify-between;
+}
+
+.back__item .item__select .select__btns, .back__item__select .item__select .select__btns, .back__item__out .item__select .select__btns {
+  @apply flex flex-row items-center;
+}
+
+.back__item .item__select .select__btns .select__pledge, .back__item__select .item__select .select__btns .select__pledge, .back__item__out .item__select .select__btns .select__pledge {
   border: 1px solid lightgray;
-  @apply w-full py-8 px-7 rounded-md mt-6 opacity-50 bg-white;
+  @apply rounded-full font-medium w-24 h-11 mr-4 px-5 flex flex-row items-center;
 }
 
-.section__item__out .item__header {
-  @apply w-full flex flex-row justify-between items-center;
+.back__item .item__select .select__btns .select__pledge label, .back__item__select .item__select .select__btns .select__pledge label, .back__item__out .item__select .select__btns .select__pledge label {
+  @apply text-base text-black;
 }
 
-.section__item__out .item__header .header__info {
-  @apply flex flex-row;
+.back__item .item__select .select__btns .select__pledge input, .back__item__select .item__select .select__btns .select__pledge input, .back__item__out .item__select .select__btns .select__pledge input {
+  border: none;
+  background-color: transparent;
+  @apply w-14 rounded-none px-0 py-0 ml-2 font-bold text-black text-sm;
 }
 
-.section__item__out .item__header .header__info h1 {
-  color: #7a7a7a;
-  @apply text-lg font-bold;
+.back__item .item__select .select__btns button, .back__item__select .item__select .select__btns button, .back__item__out .item__select .select__btns button {
+  background-color: #3cb4ac;
+  @apply rounded-full text-white font-medium w-28 h-11 shadow-sm;
 }
 
-.section__item__out .item__header .header__info p {
-  color: #7a7a7a;
-  @apply font-medium;
+.back__item__select {
+  border: 1px solid #3cb4ac;
 }
 
-.section__item__out .item__header .header__left {
-  @apply flex flex-row items-center;
+.back__item__out {
+  @apply opacity-50;
 }
 
-.section__item__out .item__header .header__left h1 {
-  color: #7a7a7a;
-  @apply font-bold text-3xl;
-}
-
-.section__item__out .item__header .header__left p {
-  color: #7a7a7a;
-  @apply ml-3;
-}
-
-.section__item__out .item__p {
-  @apply w-full mt-6 text-base;
-}
-
-.section__item__out .item__p p {
-  @apply opacity-75;
-  color: #7a7a7a;
-  line-height: 1.8rem;
+.back__item__out h1, .back__item__out p {
+  color: #7a7a7a !important;
+  @apply opacity-80;
 }
 /*# sourceMappingURL=BackSection.css.map */

@@ -1,7 +1,7 @@
 .back {
   width: 45.5rem;
   left: calc((100% - 45.5rem) / 2);
-  @apply bg-white rounded-lg align-middle flex flex-col items-center px-12 pt-14 pb-12 shadow-md absolute -top-32 z-50;
+  @apply bg-white rounded-lg align-middle flex flex-col items-center px-12 pt-10 pb-12 shadow-md absolute -top-32 z-50;
 }
 
 .back_bg {

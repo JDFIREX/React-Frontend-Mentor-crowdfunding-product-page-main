@@ -1,80 +1,110 @@
 .back__item{
     border: 1px solid rgba(197, 191, 191, 0.678);
-    @apply w-full py-8 px-7 rounded-md mt-6 bg-white;
+    @apply w-full rounded-md bg-white flex flex-col mt-6;
 
-    .item__header{
-        @apply w-full flex flex-row justify-between items-center;
 
-        .header__info{
-            @apply flex flex-row;
+    .item__info{
+        @apply w-full flex flex-row pt-7 pb-7 pr-6;
 
-            h1{
-                @apply text-lg font-bold block;
-            }
-            p{
-                color : hsl(176, 50%, 47%);
-                @apply font-medium;
+        .item__select__ring{
+            @apply w-20 h-auto flex justify-center pt-1 pl-1;
+
+            .select_ring{
+                border: 2px solid lightgray;
+                @apply w-6 h-6 rounded-full p-1;
+
+                .ring_inner{
+                    background-color: hsl(176, 50%, 47%) ;
+                    @apply w-full h-full rounded-full;
+                }
+
             }
         }
-        .header__left{
+
+        .item__main{
+            @apply flex flex-col w-full ml-1 ;
+
+            .item__header{
+                @apply w-full flex flex-row justify-between items-center;
+                .header__info{
+                    @apply flex flex-row w-full items-center;
+        
+                    h1{
+                        @apply text-base font-bold block;
+
+                        &:hover{
+                            color : hsl(176, 50%, 47%);
+                        }
+                    }
+                    p{
+                        color : hsl(176, 50%, 47%);
+                        @apply font-bold ml-4;
+                    }
+                }
+                .header__left{
+                    @apply flex flex-row items-center justify-center;
+                    h1{
+                        @apply font-bold text-xl;
+                    }
+                    p{
+                        color :  hsl(0, 0%, 48%);
+                        @apply ml-2 font-bold;
+                    }
+                }
+        
+            }
+            .item__p{
+                @apply w-full mt-4 font-medium;
+                p{
+                    font-size: .9rem;
+                    color : hsl(0, 0%, 48%);
+                    line-height: 1.8rem;
+                }
+            }
+
+        }
+
+    }
+
+    .item__select{
+        @apply w-full py-7 px-6 flex flex-row items-center justify-between;
+
+        .select__btns{
             @apply flex flex-row items-center;
-            h1{
-                @apply font-bold text-3xl;
-            }
-            p{
-                color :  hsl(0, 0%, 48%);
-                @apply ml-3;
-            }
-        }
 
-    }
-    .item__p{
-        @apply w-full mt-6 text-base;
-        p{
-            color : hsl(0, 0%, 48%);
-            line-height: 1.8rem;
+            .select__pledge{
+                border: 1px solid lightgray;
+                @apply rounded-full font-medium w-24 h-11 mr-4 px-5 flex flex-row items-center; 
+                    label{
+                        @apply text-base text-black;
+                    }
+                    input{
+                        border: none;
+                        background-color: transparent;
+                        @apply w-14 rounded-none px-0 py-0 ml-2 font-bold text-black text-sm;
+                    }
+            }
+
+            button{
+                background-color: hsl(176, 50%, 47%);
+                @apply rounded-full text-white font-medium w-28 h-11 shadow-sm; 
+            }
         }
     }
+
 }
 
-.section__item__out{
-    border: 1px solid lightgray;
-    @apply w-full py-8 px-7 rounded-md mt-6 opacity-50 bg-white;
+.back__item__select{
+    border: 1px solid hsl(176, 50%, 47%);
+    @extend .back__item;
+}
 
-    .item__header{
-        @apply w-full flex flex-row justify-between items-center;
 
-        .header__info{
-            @apply flex flex-row;
-
-            h1{
-                color : hsl(0, 0%, 48%);
-                @apply text-lg font-bold;
-            }
-            p{
-                color : hsl(0, 0%, 48%);
-                @apply font-medium;
-            }
-        }
-        .header__left{
-            @apply flex flex-row items-center;
-            h1{
-                color : hsl(0, 0%, 48%);
-                @apply font-bold text-3xl;
-            }
-            p{
-                color : hsl(0, 0%, 48%);
-                @apply ml-3;
-            }
-        }
-
-    }
-    .item__p{
-        @apply w-full mt-6 text-base;
-        p{
-            @apply opacity-75;
-            color : hsl(0, 0%, 48%);
-            line-height: 1.8rem;
-        }
+.back__item__out{
+    @extend .back__item;
+    @apply opacity-50;
+    h1,p{
+        color : hsl(0, 0%, 48%) !important;
+        @apply opacity-80;
     }
 }

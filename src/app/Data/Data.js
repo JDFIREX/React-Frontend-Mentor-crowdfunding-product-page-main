@@ -19,7 +19,8 @@ const data= [
         chooseP : "Enter your pledge",
         chooseBtn : "Continue",
         Out : "Out of stock",
-        pressed : false
+        pressed : false,
+        minPledge : 25
     },
     {
         id : 2,
@@ -31,7 +32,8 @@ const data= [
         chooseP : "Enter your pledge",
         chooseBtn : "Continue",
         Out : "Out of stock",
-        pressed : false
+        pressed : false,
+        minPledge : 75
     },
     {
         id : 3,
@@ -43,7 +45,8 @@ const data= [
         chooseP : "Enter your pledge",
         chooseBtn : "Continue",
         Out : "Out of stock",
-        pressed: false
+        pressed: false,
+        minPledge : 200
     },
     {
         id : 4,
@@ -54,7 +57,8 @@ const data= [
         chooseP : "Enter your pledge",
         chooseBtn : "Continue",
         Out : "Out of stock",
-        pressed: false
+        pressed: false,
+        minPledge : 0
     },
 ]
 

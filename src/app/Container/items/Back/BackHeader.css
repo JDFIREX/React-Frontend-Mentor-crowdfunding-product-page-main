@@ -1,9 +1,9 @@
 .back__header {
-  @apply w-full mb-10 bg-white flex-col;
+  @apply w-full mb-2 bg-white flex-col;
 }
 
 .back__header .close {
-  @apply w-full;
+  @apply w-full relative left-4;
 }
 
 .back__header .close .close_back {
@@ -11,11 +11,11 @@
 }
 
 .back__header .header__info h1 {
-  @apply text-xl font-bold text-black;
+  @apply text-xl font-bold text-black text-2xl;
 }
 
 .back__header .header__info p {
   line-height: 1.9rem;
-  @apply pt-8;
+  @apply pt-4;
 }
 /*# sourceMappingURL=BackHeader.css.map */

@@ -1,5 +1,5 @@
 import React from "react";
-import Desgin from "./../design/desktop-design.jpg"
+import Desgin from "./../design/desktop-design-modal-selected.jpg"
 import "./index.css"
 import Header from "./Header/Header"
 import Container from "./Container/Container"
