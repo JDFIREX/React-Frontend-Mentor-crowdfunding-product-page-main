@@ -5,7 +5,7 @@ import BackSection from "./Back/BackSection"
 import "./Back.css"
 
 
-const Back = ({setBack, back}) => {
+const Back = ({setBack, back, money, setMoney, backers, setBackers, thanks, setThanks}) => {
 
     const [pressed, setPressed] = useState({
         "4" : data[4].pressed, 
@@ -14,17 +14,23 @@ const Back = ({setBack, back}) => {
         "3" : data[3].pressed, 
     })
 
-    const HandleClick = (e) => {
+    const HandleClick = (e, backed = false,pledge = 0) => {
 
         let targetId = Number(e.target.dataset.id);
-        console.log(targetId)
         
         setPressed({
-            "4" : targetId === 4,
-            "1" : targetId === 1,
-            "2" : targetId === 2,
-            "3" : targetId === 3,
+            "4" : targetId === 4 ? !pressed["4"] : false,
+            "1" : targetId === 1 ? !pressed["1"] : false,
+            "2" : targetId === 2 ? !pressed["2"] : false,
+            "3" : targetId === 3 ? !pressed["3"] : false,
         })
+
+        if(backed){
+            setMoney(money + pledge)
+            setBackers(backers + 1)
+            setBack(!back)
+            setThanks(!thanks)
+        }
         
     }
 

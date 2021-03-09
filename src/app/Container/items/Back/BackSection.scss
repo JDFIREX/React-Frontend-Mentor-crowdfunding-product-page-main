@@ -67,6 +67,7 @@
     }
 
     .item__select{
+        border-top: 1px solid lightgray;
         @apply w-full py-7 px-6 flex flex-row items-center justify-between;
 
         .select__btns{
