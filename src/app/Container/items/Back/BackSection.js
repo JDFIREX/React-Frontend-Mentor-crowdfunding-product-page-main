@@ -1,13 +1,14 @@
 import React , { useState, useRef, useEffect } from "react"
 import "./BackSection.css"
 
-const BackSection  = ({data, HandleClick, pressed}) => {
+const BackSection  = React.memo(({data, HandleClick, pressed}) => {
+
     return(
         <>
             {data.left === 0 ? <OutOfStock data={data}  /> : <Stock data={data} pressed={pressed} HandleClick={HandleClick} />}
         </>
     )
-}
+})
 
 const Stock = React.memo(({data, pressed,HandleClick}) => {
 
@@ -15,8 +16,9 @@ const Stock = React.memo(({data, pressed,HandleClick}) => {
         if(backed){
             HandleClick(e,backed,pledge)
             data.left -= 1;
+            
         }else {
-            HandleClick(e,backed)
+            HandleClick(e)
         }
     }
 
@@ -42,11 +44,13 @@ const Stock = React.memo(({data, pressed,HandleClick}) => {
                             <h1 onClick={HandleClick} data-id={data.id}>{data.Header}</h1>
                             <p>{data.pledge}</p>
                         </div>
-                        {typeof data.left === "number" && (
+                        {data.id !== 4  ? (
                             <div className="header__left" >
                                 <h1>{data.left}</h1> 
                                 <p>left</p>
                             </div>
+                        ) : (
+                            <div></div>
                         )}
                     </div>
 
@@ -122,7 +126,6 @@ const InputSelect = React.memo(({min,id,ringClick}) => {
 
     const confirmPledge = (e) => {
         
-
         if(Number(pledge) >= min){
             ringClick(e, true, pledge);
             setPledge(0)
@@ -150,4 +153,4 @@ const InputSelect = React.memo(({min,id,ringClick}) => {
 
 
 
-export default React.memo(BackSection);
+export default BackSection;

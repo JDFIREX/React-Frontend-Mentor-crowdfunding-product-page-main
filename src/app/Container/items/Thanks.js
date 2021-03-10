@@ -1,18 +1,19 @@
-import React, {useEffect} from "react"
+import React, {useEffect, useRef} from "react"
 import "./Thanks.css"
 import completedLogo from "./../../../images/icon-check.svg"
 
 const Thanks = ({setThanks}) => {
 
-    useEffect(() => {
-        window.scrollTo(0,0)
-    },[])
+    const ThanksRef = useRef(0)
 
+    useEffect(() => {
+        ThanksRef.current.focus()
+    },[])
 
     return(
         <>
             <div className="Thanks_bg"></div>
-            <div className="Thanks">
+            <div className="Thanks" >
                 <div className="completed">
                     <img src={completedLogo} alt="completed" className="completed__logo" />
                 </div>
@@ -21,7 +22,7 @@ const Thanks = ({setThanks}) => {
                     <p>Your pledge brings us one step close to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our compaign is completed.</p>
                 </div>
                 <div className="completed__btn">
-                    <button onClick={() => setThanks(false)}>Got it!</button>
+                    <button onClick={() => setThanks(false)} ref={ThanksRef}>Got it!</button>
                 </div>
             </div>
         </>

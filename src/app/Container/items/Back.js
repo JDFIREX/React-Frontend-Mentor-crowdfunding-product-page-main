@@ -1,19 +1,12 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState } from "react"
 import data from "./../../Data/Data"
 import BackHeader from "./Back/BackHeader"
 import BackSection from "./Back/BackSection"
 import "./Back.css"
 
 
-const Back = ({setBack, back, money, setMoney, backers, setBackers, thanks, setThanks}) => {
+const Back = ({setBack, money, setMoney, backers, setBackers, setThanks}) => {
 
-    const BackRef = useRef(null)
-
-    useEffect(() => {
-        let top = BackRef.current
-        console.log(top.pageY)
-        window.scrollTo(0,(top - 50))
-    },[])
 
     const [pressed, setPressed] = useState({
         "4" : data[4].pressed, 
@@ -22,7 +15,9 @@ const Back = ({setBack, back, money, setMoney, backers, setBackers, thanks, setT
         "3" : data[3].pressed, 
     })
 
-    const HandleClick = (e, backed = false,pledge = 0) => {
+    
+
+    const HandleClick = (e, backed = false, pledge = 0) => {
 
         let targetId = Number(e.target.dataset.id);
         
@@ -36,8 +31,8 @@ const Back = ({setBack, back, money, setMoney, backers, setBackers, thanks, setT
         if(backed){
             setMoney(money + pledge)
             setBackers(backers + 1)
-            setBack(!back)
-            setThanks(!thanks)
+            setBack(false)
+            setThanks(true)
         }
         
     }
@@ -46,8 +41,8 @@ const Back = ({setBack, back, money, setMoney, backers, setBackers, thanks, setT
     return(
         <>
         <div className="back_bg"></div>
-        <div className="back" ref={BackRef} >
-            <BackHeader data={data[0]} setBack={setBack} back={back} />
+        <div className="back" >
+            <BackHeader data={data[0]} setBack={setBack} />
             <BackSection data={data[4]} pressed={pressed["4"]} HandleClick={HandleClick} />
             <BackSection data={data[1]} pressed={pressed["1"]} HandleClick={HandleClick} />
             <BackSection data={data[2]} pressed={pressed["2"]} HandleClick={HandleClick} />

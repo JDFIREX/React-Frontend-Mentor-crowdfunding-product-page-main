@@ -4,11 +4,11 @@ import close from "./../../../../images/icon-close-modal.svg"
 import data from "./../../../Data/Data"
 
 
-const BackHeader = ({data: sectionData, setBack, back}) => {
+const BackHeader = ({data: sectionData, setBack}) => {
 
     const HandleClick = (e) => {
         e.preventDefault();
-        setBack(!back)
+        setBack(false)
 
         for(let i = 1; i < data.length; i++){
             data[i].pressed = false;

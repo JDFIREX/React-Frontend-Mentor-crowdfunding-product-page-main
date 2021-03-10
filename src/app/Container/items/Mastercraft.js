@@ -5,7 +5,7 @@ import BookmarkedLogo from "./../../../images/icon-bookmarked.svg"
 import BookmarkHover from "./../../../images/icon-bookmark-hover.svg"
 import "./Mastercraft.css"
 
-const Mastercraft = React.memo(({ setBack, back}) => {
+const Mastercraft = React.memo(({setBack}) => {
 
     const [logo, setLogo] = useState(BookmarkLogo)
     const [book, setBook] = useState(false)
@@ -20,7 +20,7 @@ const Mastercraft = React.memo(({ setBack, back}) => {
                 <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
             </div>
             <div className="mastercraft__back">
-                <button className="back__btn" type="submit" onClick={() => setBack(!back)} >Back this project</button>
+                <button className="back__btn" type="submit" onClick={() => setBack(true)} >Back this project</button>
                 <div className="back_slider" onMouseEnter={() => setLogo(BookmarkHover)} onMouseLeave={() => setLogo(BookmarkLogo)} onClick={() => setBook(!book)}>
                     <img src={book ? BookmarkedLogo : logo } alt="slider img" className="slider__img" />
                     <p className={book ? "slider__p_book" : "slider__p"}>{book ? "Bookmarked" : "Bookmark"}</p>

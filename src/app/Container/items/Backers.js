@@ -1,18 +1,21 @@
-import React , { useState } from "react"
+import React , { useState, useEffect } from "react"
 import "./Backers.css"
 
 const Backers = React.memo(({money,backers}) => {
 
     const [hover, setHover] = useState(false);
+    let [newMoney, setNewMoney] = useState(money)
 
-    let newMoney;
-    let l = money.toString().split("").length;
-    let m = l / 3 > Math.floor(l / 3) ? Math.floor(l / 3) : Math.floor(l / 3) - 1;
-    let n = money.toString().split("").reverse()
-    for(let i = 1; i <= m; i++){
-        n.splice((i * 3) -1 + i, 0, ",");
-    } 
-    newMoney = n.reverse().join("")
+    useEffect (() => {
+        let l = money.toString().split("").length;
+        let m = l / 3 > Math.floor(l / 3) ? Math.floor(l / 3) : Math.floor(l / 3) - 1;
+        let n = money.toString().split("").reverse()
+        for(let i = 1; i <= m; i++){
+            n.splice((i * 3) -1 + i, 0, ",");
+        } 
+        setNewMoney(n.reverse().join(""));
+    },[money])
+
 
     return(
         <div className="Backers">
@@ -39,20 +42,20 @@ const Backers = React.memo(({money,backers}) => {
                     onMouseEnter={() => setHover(true)}
                     onMouseLeave={() => setHover(false)}
                 />
-                {hover && <ProgressValue money={money} />}
+                {hover && <ProgressValue money={newMoney} />}
             </div>
         </div>
     )
 })
 
 
-const ProgressValue = ({money}) => {
+const ProgressValue = React.memo(({money}) => {
     return(
         <div className="progress_value">
             <p className="progress__p">{money}</p>
         </div>
     )
-}
+})
 
 
 export default Backers

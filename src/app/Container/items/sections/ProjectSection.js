@@ -1,23 +1,19 @@
 import React from "react"
 import "./ProjectSection.css"
 
-const ProjectSection = React.memo(({ data, setBack, back }) => {
-
-    // console.log(data)
+const ProjectSection = ({ data, setBack }) => {
 
     const HandleClick = (e) => {
-        e.preventDefault();
-        setBack(!back);
+        setBack(true);
         data.pressed = true;
-        window.scrollTo(0,0)
     }
 
     return(
         <>
-            {data.left == 0 ? <OutOfStock data={data} /> : <Stock data={data} HandleClick={HandleClick} />}
+            {data.left === 0 ? <OutOfStock data={data} /> : <Stock data={data} HandleClick={HandleClick} />}
         </>
     )
-})
+}
 
 
 const Stock = React.memo(({HandleClick, data}) => {
