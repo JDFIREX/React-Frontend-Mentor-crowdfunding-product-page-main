@@ -1,5 +1,5 @@
 import React from "react";
-import Desgin from "./../design/desktop-design-modal-selected.jpg"
+import Desgin from "./../design/desktop-design-modal-completed.jpg"
 import "./index.css"
 import Header from "./Header/Header"
 import Container from "./Container/Container"
@@ -15,10 +15,10 @@ const Design = () => {
 
 export default function Main () {
     return (
-        <React.Suspense fallback={<div>Loading....</div>}>
+        <>
             <Design />
             <Header />
             <Container />
-        </React.Suspense>
+        </>
     )
 }

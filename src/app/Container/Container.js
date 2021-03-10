@@ -5,6 +5,7 @@ import Mastercraft from "./items/Mastercraft"
 import Back from "./items/Back"
 import Backers from "./items/Backers"
 import Project from "./items/Project"
+import Thanks from "./items/Thanks"
 
 const Container = () => {
 
@@ -17,6 +18,7 @@ const Container = () => {
         <div className="Container">
             <Mastercraft setBack={setBack} back={back} />
             {back && <Back setBack={setBack} back={back} setMoney={setMoney} money={money} backers={backers} setBackers={setBackers} thanks={thanks} setThanks={setThanks} />}
+            {(!back && thanks) && <Thanks setThanks={setThanks} />}
             <Backers money={money} backers={backers} />
             <Project  setBack={setBack} back={back}/>
         </div>

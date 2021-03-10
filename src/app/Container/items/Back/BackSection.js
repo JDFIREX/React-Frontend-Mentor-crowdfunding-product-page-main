@@ -42,12 +42,12 @@ const Stock = React.memo(({data, pressed,HandleClick}) => {
                             <h1 onClick={HandleClick} data-id={data.id}>{data.Header}</h1>
                             <p>{data.pledge}</p>
                         </div>
-                        {data.left !== "free" ? (
+                        {typeof data.left === "number" && (
                             <div className="header__left" >
                                 <h1>{data.left}</h1> 
                                 <p>left</p>
                             </div>
-                        ) : null}
+                        )}
                     </div>
 
                     <div className="item__p">

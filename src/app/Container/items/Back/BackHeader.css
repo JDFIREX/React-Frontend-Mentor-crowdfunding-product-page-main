@@ -7,7 +7,7 @@
 }
 
 .back__header .close .close_back {
-  @apply ml-auto;
+  @apply relative  ml-auto;
 }
 
 .back__header .header__info h1 {

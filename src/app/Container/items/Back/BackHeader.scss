@@ -4,7 +4,7 @@
     .close{
         @apply w-full relative left-4;
         .close_back{
-            @apply ml-auto;
+            @apply relative  ml-auto;
         }
     }
 

@@ -1,0 +1,42 @@
+.Thanks {
+  width: 34rem;
+  left: calc((100% - 34rem) / 2);
+  @apply bg-white rounded-lg align-middle flex flex-col shadow-md absolute z-50 top-36 mt-3 shadow;
+}
+
+.Thanks .completed {
+  @apply w-full flex items-center justify-center py-12;
+}
+
+.Thanks .completed img {
+  width: 5.5rem;
+  @apply shadow-sm;
+}
+
+.Thanks .Thanks__header {
+  @apply w-full flex flex-col items-center text-center justify-center;
+}
+
+.Thanks .Thanks__header h1 {
+  @apply font-bold text-2xl mb-4;
+}
+
+.Thanks .Thanks__header p {
+  @apply font-medium text-base px-8;
+  color: #7a7a7a;
+  line-height: 1.9rem;
+}
+
+.Thanks .completed__btn {
+  @apply w-full flex items-center mt-7 justify-center mb-12;
+}
+
+.Thanks .completed__btn button {
+  background-color: #3cb4ac;
+  @apply w-28 rounded-full text-white font-medium h-12 shadow-sm;
+}
+
+.Thanks_bg {
+  @apply fixed w-full h-full top-0 left-0 bg-black opacity-50 z-40;
+}
+/*# sourceMappingURL=Thanks.css.map */
