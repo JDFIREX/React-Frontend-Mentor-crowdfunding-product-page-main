@@ -38,7 +38,6 @@ const Backers = React.memo(({money,backers}) => {
                     className="progres"  
                     max="100000" 
                     value={money} 
-                    alt={money} 
                     onMouseEnter={() => setHover(true)}
                     onMouseLeave={() => setHover(false)}
                 />
