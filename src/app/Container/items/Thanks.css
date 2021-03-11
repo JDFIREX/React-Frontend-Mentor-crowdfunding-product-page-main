@@ -36,6 +36,10 @@
   @apply w-28 rounded-full text-white font-medium h-12 shadow-sm;
 }
 
+.Thanks .completed__btn button:hover {
+  background-color: #147b74;
+}
+
 .Thanks_bg {
   @apply fixed w-full h-full top-0 left-0 bg-black opacity-50 z-40;
 }

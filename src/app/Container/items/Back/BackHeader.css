@@ -3,11 +3,11 @@
 }
 
 .back__header .close {
-  @apply w-full relative left-4;
+  @apply w-full flex justify-end;
 }
 
-.back__header .close .close_back {
-  @apply relative  ml-auto;
+.back__header .close button {
+  @apply relative right-4;
 }
 
 .back__header .header__info h1 {
@@ -24,8 +24,8 @@
   .back__header .close {
     @apply top-6;
   }
-  .back__header .close .close_back {
-    @apply mr-3;
+  .back__header .close button {
+    @apply right-0 top-6;
   }
 }
 /*# sourceMappingURL=BackHeader.css.map */

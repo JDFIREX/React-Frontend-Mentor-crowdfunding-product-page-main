@@ -2,9 +2,9 @@
     @apply w-full mb-2 bg-white flex-col;
 
     .close{
-        @apply w-full relative left-4;
-        .close_back{
-            @apply relative  ml-auto;
+        @apply w-full flex justify-end;
+        button{
+            @apply relative right-4;
         }
     }
 
@@ -26,8 +26,8 @@
     .back__header{    
         .close{
             @apply top-6;
-            .close_back{
-                @apply  mr-3;
+            button{
+                @apply right-0 top-6;
             }
         }
     }

@@ -44,7 +44,7 @@
 
 .section__item .item__select button, .section__item__out .item__select button {
   background-color: #3cb4ac;
-  @apply w-40 h-12 text-white rounded-full shadow text-sm font-medium;
+  @apply w-40 h-12 text-white rounded-full shadow text-sm font-medium cursor-pointer;
 }
 
 .section__item .item__select button:hover, .section__item__out .item__select button:hover {
@@ -62,6 +62,14 @@
 
 .section__item__out button {
   background-color: #7a7a7a;
+}
+
+.section__item__out .item__select button {
+  cursor: not-allowed;
+}
+
+.section__item__out .item__select button:hover {
+  background-color: #3cb4ac;
 }
 
 @media only screen and (max-width: 500px) {

@@ -30,7 +30,7 @@
 }
 
 .mastercraft .mastercraft__back .back_slider {
-  @apply flex flex-row bg-gray-100 items-center rounded-full shadow;
+  @apply flex flex-row bg-gray-100 items-center rounded-full shadow cursor-pointer;
 }
 
 .mastercraft .mastercraft__back .back_slider p {

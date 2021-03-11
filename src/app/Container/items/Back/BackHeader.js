@@ -20,7 +20,7 @@ const BackHeader = ({data: sectionData, setBack}) => {
     return(
         <div className="back__header">
             <div className="close">
-                <img src={close} alt="close" className="close_back" onClick={HandleClick} />
+               <button><img src={close} alt="close" className="close_back" onClick={HandleClick} /></button>
             </div>
             <div className="header__info">
                 <h1>{sectionData.chooseH}</h1>

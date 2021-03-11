@@ -24,7 +24,7 @@
             }
         }
         .back_slider{
-            @apply flex flex-row bg-gray-100 items-center rounded-full shadow;
+            @apply flex flex-row bg-gray-100 items-center rounded-full shadow cursor-pointer;
             p{
                 color : hsl(0, 0%, 48%);
                 @apply pl-4 pr-6 font-bold;

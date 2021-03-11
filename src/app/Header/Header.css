@@ -29,11 +29,15 @@
 
 .header .header__box .nav .nav__item {
   font-family: 'Commissioner', sans-serif;
-  @apply mx-3 font-normal text-white text-sm;
+  @apply mx-3 font-normal text-white text-sm cursor-pointer;
 }
 
 .header .header__box .nav .nav__item:last-child {
   @apply mr-2;
+}
+
+.header .header__box .nav .nav__item:hover {
+  border-bottom: 1px solid #ebe9e9;
 }
 
 @media only screen and (max-width: 1070px) {
@@ -54,17 +58,24 @@
   .header .header__box .nav {
     @apply z-50;
   }
+  .header .header__box .nav img {
+    cursor: pointer;
+  }
   .header .header__box .nav .nav__mobile {
     width: calc(100% - 10vw);
     left: 5vw;
-    @apply fixed bg-white top-24 flex flex-col items-center justify-center rounded z-50;
+    @apply fixed bg-white top-24 flex flex-col items-center justify-center rounded z-50 overflow-hidden;
   }
   .header .header__box .nav .nav__mobile p {
     border-bottom: 1px solid rgba(224, 217, 217, 0.836);
     @apply text-black w-full pl-5 py-4 text-lg font-medium;
   }
   .header .header__box .nav .nav__mobile p:nth-child(3) {
-    border-bottom: none;
+    border-bottom: 1px solid transparent;
+    margin-left: 7px;
+  }
+  .header .header__box .nav .nav__mobile p:hover {
+    background: #147b74;
   }
   .header .open {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.829)), color-stop(rgba(0, 0, 0, 0.74)), color-stop(rgba(0, 0, 0, 0.555)), to(rgba(107, 107, 107, 0.445)));

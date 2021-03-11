@@ -28,6 +28,9 @@
         button{
             background-color: hsl(176, 50%, 47%);
             @apply w-28 rounded-full text-white font-medium h-12 shadow-sm;
+            &:hover{
+                background-color: #147b74;
+            }
         }
     }
 

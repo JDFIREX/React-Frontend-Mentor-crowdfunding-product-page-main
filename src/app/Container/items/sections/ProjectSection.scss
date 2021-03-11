@@ -34,7 +34,7 @@
         }
         button{
             background-color: hsl(176, 50%, 47%);
-            @apply w-40 h-12 text-white rounded-full shadow text-sm font-medium;
+            @apply w-40 h-12 text-white rounded-full shadow text-sm font-medium cursor-pointer;
             &:hover{
                 background-color: hsl(176, 72%, 28%);
             }
@@ -51,6 +51,14 @@
     }
     button{
         background-color: hsl(0, 0%, 48%);
+    }
+    .item__select{
+        button{
+            cursor:not-allowed;
+            &:hover{
+                background-color: hsl(176, 50%, 47%);
+            }
+        }
     }
 
 }

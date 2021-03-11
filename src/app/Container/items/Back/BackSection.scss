@@ -30,7 +30,7 @@
                     @apply flex flex-row w-full items-center;
         
                     h1{
-                        @apply text-base font-bold block;
+                        @apply text-base font-bold block cursor-pointer;
 
                         &:hover{
                             color : hsl(176, 50%, 47%);
@@ -89,6 +89,9 @@
             button{
                 background-color: hsl(176, 50%, 47%);
                 @apply rounded-full text-white font-medium w-28 h-11 shadow-sm; 
+                &:hover{
+                    background-color : #147b74;
+                }
             }
         }
     }
@@ -102,6 +105,7 @@
 
 
 .back__item__out{
+    cursor: not-allowed;
     @extend .back__item;
     @apply opacity-50;
     h1,p{

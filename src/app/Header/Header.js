@@ -45,6 +45,7 @@ const Nav = ({setOpen, open}) => {
             setNav(true)
         }else{
             setNav(false)
+            setOpen(false)
         }
     }
 
