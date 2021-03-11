@@ -58,7 +58,7 @@ const data= [
         chooseBtn : "Continue",
         Out : "Out of stock",
         pressed: false,
-        minPledge : 0
+        minPledge : 1
     },
 ]
 

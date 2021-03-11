@@ -54,3 +54,18 @@
     }
 
 }
+
+@media only screen and (max-width: 500px){
+    .section__item{
+        @apply py-5 px-5;
+        .item__header{
+            @apply  flex-col items-start justify-start;
+        }
+        .item__select{
+            @apply  flex-col items-start justify-start;
+            button{
+                @apply mt-4;
+            }
+        }
+    }
+}

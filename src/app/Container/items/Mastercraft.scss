@@ -10,7 +10,7 @@
         }
         p{
             color : hsl(0, 0%, 48%);
-            @apply text-base mt-4;
+            @apply text-base mt-4 text-center;
         }
     }
     .mastercraft__back{
@@ -31,6 +31,32 @@
             }
             .slider__p_book{
                 color : #147b74;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 800px){
+    .mastercraft{
+        @apply w-full;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .mastercraft{
+         @apply px-4;
+        .mastercraft__back{    
+            .back__btn{
+                @apply px-9;
+            }
+            .back_slider{
+                p{
+                    display: none
+                }
+                .slider__p_book{
+                    display: none
+                }
             }
         }
     }

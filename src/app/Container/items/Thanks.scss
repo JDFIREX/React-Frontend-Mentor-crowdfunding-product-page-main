@@ -1,7 +1,7 @@
 .Thanks{
     width: 34rem;
     left: calc((100% - 34rem) / 2);
-    @apply bg-white rounded-lg align-middle flex flex-col shadow-md absolute z-50 top-36 mt-3 shadow;
+    @apply bg-white rounded-lg align-middle flex flex-col shadow-md absolute z-40 top-36 mt-3 shadow;
 
     .completed{
         @apply w-full flex items-center justify-center py-12;
@@ -36,4 +36,12 @@
 }
 .Thanks_bg{
     @apply fixed w-full h-full top-0 left-0 bg-black opacity-50 z-40;
+}
+
+
+@media only screen and (max-width: 600px){
+    .Thanks{
+        width: calc(100% - 10vw);
+        left: 5vw;  
+    }
 }

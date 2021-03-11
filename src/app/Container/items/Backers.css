@@ -57,4 +57,31 @@
   border-right: .5rem solid transparent;
   border-bottom: 1rem solid #fafafa;
 }
+
+@media only screen and (max-width: 800px) {
+  .Backers {
+    @apply w-full py-6 px-10;
+  }
+  .Backers .Back__stats {
+    @apply flex-col justify-start items-center;
+  }
+  .Backers .Back__stats .stats__item {
+    border-right: none;
+    border-bottom: 1px solid lightgray;
+    @apply w-auto pl-0 items-center pb-2 mb-3;
+  }
+  .Backers .Back__stats .stats__item h1 {
+    @apply text-center;
+  }
+  .Backers .Back__stats .stats__item p {
+    @apply text-center;
+  }
+  .Backers .Back__stats .stats__item:last-child {
+    border-bottom: none;
+    @apply pb-0 mb-0;
+  }
+  .Backers .Back__range {
+    @apply pl-0;
+  }
+}
 /*# sourceMappingURL=Backers.css.map */

@@ -16,6 +16,16 @@
 
 .back__header .header__info p {
   line-height: 1.9rem;
+  color: #7a7a7a;
   @apply pt-4;
+}
+
+@media only screen and (max-width: 800px) {
+  .back__header .close {
+    @apply top-6;
+  }
+  .back__header .close .close_back {
+    @apply mr-3;
+  }
 }
 /*# sourceMappingURL=BackHeader.css.map */

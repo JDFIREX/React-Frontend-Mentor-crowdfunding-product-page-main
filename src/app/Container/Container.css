@@ -1,4 +1,12 @@
 .Container {
   @apply relative -top-24 w-full flex flex-col items-center;
 }
+
+@media only screen and (max-width: 800px) {
+  .Container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    @apply w-full;
+  }
+}
 /*# sourceMappingURL=Container.css.map */

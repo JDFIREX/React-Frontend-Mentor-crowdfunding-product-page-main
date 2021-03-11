@@ -110,4 +110,96 @@
   color: #7a7a7a !important;
   @apply opacity-80;
 }
+
+@media only screen and (max-width: 700px) {
+  .back__item .item__info, .back__item__select .item__info, .back__item__out .item__info {
+    @apply w-full flex flex-col px-7 py-7;
+  }
+  .back__item .item__info .item__header, .back__item__select .item__info .item__header, .back__item__out .item__info .item__header {
+    @apply w-full flex flex-row justify-start items-center;
+  }
+  .back__item .item__info .item__header .select_ring, .back__item__select .item__info .item__header .select_ring, .back__item__out .item__info .item__header .select_ring {
+    border: 2px solid lightgray;
+    @apply w-6 h-6 rounded-full p-1;
+  }
+  .back__item .item__info .item__header .select_ring .ring_inner, .back__item__select .item__info .item__header .select_ring .ring_inner, .back__item__out .item__info .item__header .select_ring .ring_inner {
+    background-color: #3cb4ac;
+    @apply w-full h-full rounded-full;
+  }
+  .back__item .item__info .item__header .header__info, .back__item__select .item__info .item__header .header__info, .back__item__out .item__info .item__header .header__info {
+    @apply flex flex-row w-full items-center ml-6;
+  }
+  .back__item .item__info .item__header .header__info h1, .back__item__select .item__info .item__header .header__info h1, .back__item__out .item__info .item__header .header__info h1 {
+    @apply text-base font-bold block;
+  }
+  .back__item .item__info .item__header .header__info h1:hover, .back__item__select .item__info .item__header .header__info h1:hover, .back__item__out .item__info .item__header .header__info h1:hover {
+    color: #3cb4ac;
+  }
+  .back__item .item__info .item__header .header__info p, .back__item__select .item__info .item__header .header__info p, .back__item__out .item__info .item__header .header__info p {
+    color: #3cb4ac;
+    @apply font-bold ml-4;
+  }
+  .back__item .item__info .item__p, .back__item__select .item__info .item__p, .back__item__out .item__info .item__p {
+    @apply w-full mt-4 font-medium;
+  }
+  .back__item .item__info .item__p p, .back__item__select .item__info .item__p p, .back__item__out .item__info .item__p p {
+    font-size: .9rem;
+    color: #7a7a7a;
+    line-height: 1.8rem;
+  }
+  .back__item .item__info .header__left, .back__item__select .item__info .header__left, .back__item__out .item__info .header__left {
+    @apply flex flex-row items-center justify-start mt-4;
+  }
+  .back__item .item__info .header__left h1, .back__item__select .item__info .header__left h1, .back__item__out .item__info .header__left h1 {
+    @apply font-bold text-xl;
+  }
+  .back__item .item__info .header__left p, .back__item__select .item__info .header__left p, .back__item__out .item__info .header__left p {
+    color: #7a7a7a;
+    @apply ml-2 font-bold;
+  }
+  .back__item .item__select, .back__item__select .item__select, .back__item__out .item__select {
+    border-top: 1px solid lightgray;
+    @apply w-full py-7 px-6 flex flex-row items-center justify-between;
+  }
+  .back__item .item__select .select__btns, .back__item__select .item__select .select__btns, .back__item__out .item__select .select__btns {
+    @apply flex flex-row items-center;
+  }
+  .back__item .item__select .select__btns .select__pledge, .back__item__select .item__select .select__btns .select__pledge, .back__item__out .item__select .select__btns .select__pledge {
+    border: 1px solid lightgray;
+    @apply rounded-full font-medium w-24 h-11 mr-4 px-5 flex flex-row items-center;
+  }
+  .back__item .item__select .select__btns .select__pledge label, .back__item__select .item__select .select__btns .select__pledge label, .back__item__out .item__select .select__btns .select__pledge label {
+    @apply text-base text-black;
+  }
+  .back__item .item__select .select__btns .select__pledge input, .back__item__select .item__select .select__btns .select__pledge input, .back__item__out .item__select .select__btns .select__pledge input {
+    border: none;
+    background-color: transparent;
+    @apply w-14 rounded-none px-0 py-0 ml-2 font-bold text-black text-sm;
+  }
+  .back__item .item__select .select__btns button, .back__item__select .item__select .select__btns button, .back__item__out .item__select .select__btns button {
+    background-color: #3cb4ac;
+    @apply rounded-full text-white font-medium w-28 h-11 shadow-sm;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .back__item .item__info, .back__item__select .item__info, .back__item__out .item__info {
+    @apply px-4 py-4;
+  }
+  .back__item .item__info .item__header .header__info, .back__item__select .item__info .item__header .header__info, .back__item__out .item__info .item__header .header__info {
+    @apply flex-col items-start ml-2;
+  }
+  .back__item .item__info .item__header .header__info h1, .back__item__select .item__info .item__header .header__info h1, .back__item__out .item__info .item__header .header__info h1 {
+    @apply text-base;
+  }
+  .back__item .item__info .item__header .header__info p, .back__item__select .item__info .item__header .header__info p, .back__item__out .item__info .item__header .header__info p {
+    @apply ml-0 text-sm;
+  }
+  .back__item .item__select, .back__item__select .item__select, .back__item__out .item__select {
+    @apply flex-col items-center justify-center;
+  }
+  .back__item .item__select .select__btns, .back__item__select .item__select .select__btns, .back__item__out .item__select .select__btns {
+    @apply flex flex-row items-center mt-4;
+  }
+}
 /*# sourceMappingURL=BackSection.css.map */

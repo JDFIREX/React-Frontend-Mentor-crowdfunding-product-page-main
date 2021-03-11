@@ -63,4 +63,19 @@
 .section__item__out button {
   background-color: #7a7a7a;
 }
+
+@media only screen and (max-width: 500px) {
+  .section__item, .section__item__out {
+    @apply py-5 px-5;
+  }
+  .section__item .item__header, .section__item__out .item__header {
+    @apply flex-col items-start justify-start;
+  }
+  .section__item .item__select, .section__item__out .item__select {
+    @apply flex-col items-start justify-start;
+  }
+  .section__item .item__select button, .section__item__out .item__select button {
+    @apply mt-4;
+  }
+}
 /*# sourceMappingURL=ProjectSection.css.map */

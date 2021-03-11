@@ -8,12 +8,23 @@
   height: 25rem;
 }
 
+.header::before {
+  content: '';
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.801)), color-stop(rgba(0, 0, 0, 0.432)), color-stop(rgba(0, 0, 0, 0.281)), to(rgba(107, 107, 107, 0.151)));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.801), rgba(0, 0, 0, 0.432), rgba(0, 0, 0, 0.281), rgba(107, 107, 107, 0.151));
+  @apply absolute top-0 left-0 w-full h-full;
+}
+
 .header .header__box {
   @apply py-12 px-40 flex flex-row justify-between w-full items-center ml-1;
 }
 
+.header .header__box .logo {
+  @apply z-50;
+}
+
 .header .header__box .nav {
-  @apply flex flex-row;
+  @apply flex flex-row z-50;
 }
 
 .header .header__box .nav .nav__item {
@@ -23,5 +34,47 @@
 
 .header .header__box .nav .nav__item:last-child {
   @apply mr-2;
+}
+
+@media only screen and (max-width: 1070px) {
+  .header .header__box {
+    width: 45.5rem;
+    @apply px-0 ml-auto mr-auto;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .header {
+    padding: 0 5vw;
+  }
+  .header .header__box {
+    width: 100%;
+    @apply ml-0 mr-0;
+  }
+  .header .header__box .nav {
+    @apply z-50;
+  }
+  .header .header__box .nav .nav__mobile {
+    width: calc(100% - 10vw);
+    left: 5vw;
+    @apply fixed bg-white top-24 flex flex-col items-center justify-center rounded z-50;
+  }
+  .header .header__box .nav .nav__mobile p {
+    border-bottom: 1px solid rgba(224, 217, 217, 0.836);
+    @apply text-black w-full pl-5 py-4 text-lg font-medium;
+  }
+  .header .header__box .nav .nav__mobile p:nth-child(3) {
+    border-bottom: none;
+  }
+  .header .open {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.829)), color-stop(rgba(0, 0, 0, 0.74)), color-stop(rgba(0, 0, 0, 0.555)), to(rgba(107, 107, 107, 0.445)));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.829), rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.555), rgba(107, 107, 107, 0.445));
+    height: 100vh;
+    padding: 0 5vw;
+    @apply fixed left-0 items-start pt-12 z-50;
+  }
+  .header .open .logo {
+    @apply z-50;
+  }
 }
 /*# sourceMappingURL=Header.css.map */

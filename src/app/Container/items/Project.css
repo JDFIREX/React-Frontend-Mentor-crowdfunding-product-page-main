@@ -2,4 +2,12 @@
   width: 45.5rem;
   @apply mt-6  rounded-lg shadow-md py-12 px-12 bg-white;
 }
+
+@media only screen and (max-width: 800px) {
+  .project {
+    padding-right: 5vw;
+    padding-left: 5vw;
+    @apply w-full;
+  }
+}
 /*# sourceMappingURL=Project.css.map */

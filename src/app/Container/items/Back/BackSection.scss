@@ -109,3 +109,122 @@
         @apply opacity-80;
     }
 }
+
+
+@media only screen and (max-width: 700px){
+    .back__item{
+    
+        .item__info{
+            @apply w-full flex flex-col px-7 py-7;
+    
+            .item__header{
+                @apply w-full flex flex-row justify-start items-center;
+
+                .select_ring{
+                    border: 2px solid lightgray;
+                    @apply w-6 h-6 rounded-full p-1;
+    
+                    .ring_inner{
+                        background-color: hsl(176, 50%, 47%) ;
+                        @apply w-full h-full rounded-full;
+                    }
+    
+                }
+                .header__info{
+                    @apply flex flex-row w-full items-center ml-6;
+        
+                    h1{
+                        @apply text-base font-bold block;
+
+                        &:hover{
+                            color : hsl(176, 50%, 47%);
+                        }
+                    }
+                    p{
+                        color : hsl(176, 50%, 47%);
+                        @apply font-bold ml-4;
+                    }
+                }
+        
+            }
+            .item__p{
+                @apply w-full mt-4 font-medium;
+                p{
+                    font-size: .9rem;
+                    color : hsl(0, 0%, 48%);
+                    line-height: 1.8rem;
+                }
+            }
+            .header__left{
+                @apply flex flex-row items-center justify-start mt-4;
+                h1{
+                    @apply font-bold text-xl;
+                }
+                p{
+                    color :  hsl(0, 0%, 48%);
+                    @apply ml-2 font-bold;
+                }
+            }
+    
+        }
+    
+        .item__select{
+            border-top: 1px solid lightgray;
+            @apply w-full py-7 px-6 flex flex-row items-center justify-between;
+    
+            .select__btns{
+                @apply flex flex-row items-center;
+    
+                .select__pledge{
+                    border: 1px solid lightgray;
+                    @apply rounded-full font-medium w-24 h-11 mr-4 px-5 flex flex-row items-center; 
+                        label{
+                            @apply text-base text-black;
+                        }
+                        input{
+                            border: none;
+                            background-color: transparent;
+                            @apply w-14 rounded-none px-0 py-0 ml-2 font-bold text-black text-sm;
+                        }
+                }
+    
+                button{
+                    background-color: hsl(176, 50%, 47%);
+                    @apply rounded-full text-white font-medium w-28 h-11 shadow-sm; 
+                }
+            }
+        }
+    
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    .back__item{
+    
+        .item__info{
+            @apply px-4 py-4;
+            .item__header{
+                .header__info{
+                    @apply flex-col items-start ml-2;
+                    h1{
+                        @apply text-base;
+                    }
+                    p{
+                        @apply ml-0 text-sm;
+                    }
+                }
+            }
+        }
+    
+        .item__select{
+            @apply flex-col items-center justify-center;
+    
+            .select__btns{
+                @apply flex flex-row items-center mt-4;
+
+            }
+        }
+    
+    }
+}

@@ -13,7 +13,7 @@
 
 .mastercraft .mastercraft__header p {
   color: #7a7a7a;
-  @apply text-base mt-4;
+  @apply text-base mt-4 text-center;
 }
 
 .mastercraft .mastercraft__back {
@@ -40,5 +40,26 @@
 
 .mastercraft .mastercraft__back .back_slider .slider__p_book {
   color: #147b74;
+}
+
+@media only screen and (max-width: 800px) {
+  .mastercraft {
+    @apply w-full;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .mastercraft {
+    @apply px-4;
+  }
+  .mastercraft .mastercraft__back .back__btn {
+    @apply px-9;
+  }
+  .mastercraft .mastercraft__back .back_slider p {
+    display: none;
+  }
+  .mastercraft .mastercraft__back .back_slider .slider__p_book {
+    display: none;
+  }
 }
 /*# sourceMappingURL=Mastercraft.css.map */

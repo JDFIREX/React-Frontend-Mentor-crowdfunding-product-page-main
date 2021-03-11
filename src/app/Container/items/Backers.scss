@@ -47,3 +47,32 @@
         }
     }
 }
+
+
+@media only screen and (max-width: 800px){
+    .Backers{
+        @apply w-full py-6 px-10;
+        .Back__stats{
+            @apply flex-col justify-start items-center;
+    
+            .stats__item{
+                border-right: none;
+                border-bottom: 1px solid lightgray;
+                @apply w-auto pl-0 items-center pb-2 mb-3;
+                h1{
+                    @apply text-center;
+                }
+                p{
+                    @apply text-center;
+                }
+                &:last-child{
+                    border-bottom: none;
+                    @apply pb-0 mb-0;
+                }
+            }
+        }
+        .Back__range{
+            @apply pl-0 ;
+        }
+    }
+}

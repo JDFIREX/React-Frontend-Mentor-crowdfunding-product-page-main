@@ -15,7 +15,20 @@
         }
         p{
             line-height: 1.9rem;
+            color : hsl(0, 0%, 48%);
             @apply pt-4;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 800px){
+    .back__header{    
+        .close{
+            @apply top-6;
+            .close_back{
+                @apply  mr-3;
+            }
         }
     }
 }
